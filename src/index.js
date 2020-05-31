@@ -1,6 +1,3 @@
-// <⚠️ DONT DELETE THIS ⚠️>
-import "./styles.css";
-// <⚠️ /DONT DELETE THIS ⚠️>
 
 const calGrid = document.querySelector(".wrapper");
 let totalGrid;
