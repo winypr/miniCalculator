@@ -55,6 +55,7 @@ function calResult(text, operation) {
   console.log("result", result);
   return result;
 }
+
 function paintTotal(text) {
   totalGrid.innerText = text;
 }
@@ -93,24 +94,32 @@ function handleCal(event) {
 
 function paintCal() {
   let check = 0;
+ 
   for (var i = 0; i < 17; i++) {
     const div = document.createElement("div");
     div.classList.add("item");
-
     if (i === 0) {
+     
       div.classList.add("total");
       div.innerText = 0;
+    
     } else if (i === 1) {
+    
       div.classList.add("reset-color");
       div.innerText = "C";
+      
     } else if (i % 4 === 1 || i === 16) {
+      
       div.classList.add("operate-color");
       const operate = ["+", "-", "*", "/"];
       div.innerText = operate[Math.floor(i / 4) - 1];
+  
     } else {
+      
       div.classList.add("number-color");
       const tempNo = [7, 8, 9, 4, 5, 6, 1, 2, 3, 0, "="];
       div.innerText = tempNo[check];
+    
       check++;
     }
     calGrid.appendChild(div);
